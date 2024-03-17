@@ -1,0 +1,19 @@
+
+<header class="header">
+    <a class="logo"><img class="brand-logo" src="../../../assets/images/logo3.png" alt="logo">Groceteria</a>
+    <nav class="nav-items">
+      <i class="fa fa-home" style="color: white;"></i><a (click)="gotourl('/admin/home')" [class.selected]="url === '/admin/home'">Home</a>
+      
+      <i class="fa fa-plus-circle" style="color: white;"></i><a (click)="gotourl('/admin/additem')" [class.selected]="url === '/admin/additem'">Add-Item</a>
+      
+      <i class="fa fa-list-ul" style="color: white;"></i><a (click)="gotourl('/admin/itemlist')" [class.selected]="url === '/admin/itemlist'">Item-List</a>
+      
+      <i class="fa fa-list-alt" style="color: white;"></i><a (click)="gotourl('/admin/order-list')" [class.selected]="url === '/admin/order-list'">Order-List</a>
+      
+      <i class="fa fa-sign-out" style="color: white;"></i><a (click)="gotourl('/admin/logout')" [class.selected]="url === '/admin/logout'">Logout</a> 
+    </nav>
+  </header>
+
+  
+  
+

@@ -1,0 +1,32 @@
+<p><b>Order History</b></p>
+
+<div class="header">
+    <mat-icon (click)="closeDialog()">close</mat-icon>
+</div>
+
+<div class="scroll centered">
+    <div *ngIf="item.length === 0">
+        There is not any item in the Order
+    </div>
+    <div *ngIf="item.length > 0">
+        <table border="1">
+            <tr>
+                <th>Item Id</th>
+                <th>Item Name</th>
+                <th>Category</th>
+                <th>Item Image</th>
+                <th>Item MRP</th>
+            </tr>
+            <tr *ngFor="let itm of item">
+                <td>{{itm?.itemId}}</td>
+                <td>{{itm?.itemName}}</td>
+                <td>{{itm?.category}}</td>
+                <td><img [src]="itm?.image" /></td>
+                <td>{{itm?.mrpPrice}}</td>
+        </table>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<br>

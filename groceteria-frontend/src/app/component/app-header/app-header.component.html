@@ -1,0 +1,17 @@
+<body>
+  
+
+<header class="header">
+    <!-- <a class="logo"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Groceteria</a> -->
+    <a class="logo"><img class="brand-logo" src="../../../assets/images/logo3.png" alt="logo">Groceteria</a>
+    <nav class="nav-items">
+
+      <i class="fa fa-home" style="color: white;"></i> <a (click)="gotourl('home')" [class.selected]="url === '/home'">Home</a>
+      <i class="fa fa-question-circle" style="color: white;"></i><a (click)="gotourl('about-us')" [class.selected]="url === '/about-us'">About-us</a>
+      <i class="fa fa-user-circle" style="color: white"></i><a (click)="gotourl('user-login')" [class.selected]="url === '/user-login'">Login</a>
+      <i class="fa fa-mobile" style="color: white"></i><a (click)="gotourl('contact-us')" [class.selected]="url === '/contact-us'">Contact-us</a>
+    </nav>
+  </header>
+
+</body>
+  

@@ -1,0 +1,96 @@
+
+
+    
+<br>
+<br>
+<div class="head-login">
+
+
+    <div class="wrapper">
+        
+            <h1>Login</h1>
+
+            <div class="inputbox">
+                <input type="text" [(ngModel)]="emailId" placeholder="Emailid" required>
+                <i class="fa fa-solid fa-user"></i>
+                <div class="error">{{errormessage}}</div>
+            </div>
+
+            <div class="inputbox">
+                <input type="password" [(ngModel)]="password" placeholder="Password" required>
+                <i class="fa fa-solid fa-lock"></i>
+                <div class="error">{{errormessagep}}</div>
+            </div>
+
+            <div class="remember-forgot">
+               
+                <a (click)="routeToForgotPassword()">Forgot password?</a>
+            </div>
+
+            <button  class="btn"  (click)="login()" >Login</button>
+            <div class="register-link">
+                <p>Don't have an account?<a class="message" (click)="routeToNewUser()">Register</a></p>
+            </div>
+
+    </div>
+
+</div>
+
+
+<!--Footer page-->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="row">
+
+            <div class="footer-col">
+                <h4>company</h4>
+                <ul>
+                    <li class="foot"><a href="#">about us</a></li>
+                    <li class="foot"><a href="#">category</a></li>
+                    <li class="foot"><a href="#">privacy policy</a></li>
+                    <li class="foot"><a href="#">affiliate program</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>get help</h4>
+                <ul>
+                    <li class="foot"><a href="#">FAQ</a></li>
+                    <li class="foot"><a href="#">shipping</a></li>
+                    <li class="foot"><a href="#">returns</a></li>
+                    <li class="foot"><a href="#">order status</a></li>
+                    <li class="foot"><a href="#">payment options</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>groceteria</h4>
+                <ul>
+                    <li class="foot"><a href="#">vegetables & fruits</a></li>
+                    <li class="foot"><a href="#">fresh meat</a></li>
+                    <li class="foot"><a href="#">speices and oils</a></li>
+                    <li class="foot"><a href="#">baby care</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>follow us</h4>
+               <div class="social-links">
+                
+                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a> 
+            </div> 
+            </div>
+
+
+
+        </div>
+    </div>
+    
+</footer>
+
+
+
+

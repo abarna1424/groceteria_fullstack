@@ -1,0 +1,46 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(#f55e07,#f50f07);
+  }
+  .header .brand-logo{
+    width: 40px;
+  }
+  
+  header.site-logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+  }
+  
+  .header .logo {
+    font-size: 30px;
+    font-family: 'Sriracha', cursive;
+    color: hsl(0, 0%, 100%);
+    text-decoration: none;
+    margin-left: 30px;
+    font-weight: 800;
+  }
+  
+  .nav-items {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(#f55e07,#f50f07);
+    margin-right: 20px;
+  }
+  
+  .nav-items a {
+    text-decoration: none;
+    color: hsl(0, 0%, 100%);
+    padding: 35px 20px;
+    font-weight: 600;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  .nav-items a:hover{
+    color: #f5ecdb;
+  }
+  

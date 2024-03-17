@@ -1,0 +1,89 @@
+
+
+<div *ngIf="orderList.length>0" class="centered"><table border="1">
+    <tr>
+    
+    <th>History</th>
+    <th>Order Date</th>
+    <th>Total price</th>
+    <th>Order Status</th>
+    <th>Payment Status</th>
+    <th></th>
+
+    </tr>
+    <tr *ngFor="let order of orderList">
+        <td><mat-icon (click)="openHistory(order)" style="background-color: transparent ;color:white;">history</mat-icon>
+        </td>
+       
+        <td>{{getDate(order?.orderDate)}}</td>
+         <td>{{order?.totalPrice}}</td>
+        <td>{{order?.orderStatus === 'success' ? 'Order not confirmed' : order?.orderStatus}}</td>
+        <td>{{order?.paymentStatus === 'success' ? 'UnPaid' : order?.paymentStatus}}</td>
+        <td><div *ngIf="order?.paymentStatus !== 'PAID'"> <button class="pay"  (click)="addPayment(order)" mat-raised-button color="primary" >Payment</button></div></td>
+    </tr>
+</table>
+</div>
+<br>
+<br>
+<br>
+<br>
+
+
+<!--Footer page-->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="row">
+
+            <div class="footer-col">
+                <h4>company</h4>
+                <ul>
+                    <li class="foot"><a href="#">about us</a></li>
+                    <li class="foot"><a href="#">category</a></li>
+                    <li class="foot"><a href="#">privacy policy</a></li>
+                    <li class="foot"><a href="#">affiliate program</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>get help</h4>
+                <ul>
+                    <li class="foot"><a href="#">FAQ</a></li>
+                    <li class="foot"><a href="#">shipping</a></li>
+                    <li class="foot"><a href="#">returns</a></li>
+                    <li class="foot"><a href="#">order status</a></li>
+                    <li class="foot"><a href="#">payment options</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>groceteria</h4>
+                <ul>
+                    <li class="foot"><a href="#">vegetables & fruits</a></li>
+                    <li class="foot"><a href="#">fresh meat</a></li>
+                    <li class="foot"><a href="#">speices and oils</a></li>
+                    <li class="foot"><a href="#">baby care</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>follow us</h4>
+               <div class="social-links">
+                
+                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a> 
+            </div> 
+            </div>
+
+
+
+        </div>
+    </div>
+    
+</footer>
+
+
+
+
+

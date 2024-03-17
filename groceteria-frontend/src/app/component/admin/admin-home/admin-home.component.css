@@ -1,0 +1,139 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    /* font-family: Arial, Helvetica, sans-serif; */
+}
+
+.admin{
+   width: 100%;
+   height: 350px;
+   background: linear-gradient(rgba(0, 0, 0, .35),rgba(0, 0, 0, .35)),url('../../../../assets/images/b10.jpg');
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+h2{
+   color: white;
+   font-family: cursive;
+   font-size: 40px;
+   font-weight: 800;
+   text-align: center;
+   padding-top: 30px;
+}
+
+/*FEATURES STYLING HERE*/
+.heading{
+   margin-top: 5%;
+   text-align: center;
+   padding:2rem o;
+   padding-bottom: 3rem;
+   font-size:35px;
+   color: rgb(8, 8, 8);
+}
+.heading span{
+   background-color: crimson;
+   color: hwb(46 83% 2%);
+   display: inline-block;
+   padding:.5rem 3rem;
+   clip-path: polygon(100% 0, 93% 50%, 100% 99%,0% 100%, 7% 50%, 0% 0%);
+}
+
+ .features_img{
+   width: 400px;
+   height: 250px;
+   padding-top: 20px;
+}
+.box-container{
+   text-align: center;
+   margin-top: 8px;
+}
+
+.box-container .box{
+  width: 400px;
+  height: 350px;
+  border: 2px solid wheat;
+  margin: 10px;
+  padding:10px 0;
+  display: inline-block;
+  /* background: linear-gradient(crimson,hwb(36 13% 2% / 0.788)); */
+  border-radius: 10px;
+  border:none;
+}
+
+
+/*-----------------------------footer area styling---------------------------------------------------*/
+.footer-container{
+    max-width: 1170px;
+    margin: auto;
+    line-height: 1.5;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+ }
+ .row{
+    display:flex;
+    flex-wrap: wrap;
+ }
+ .footer-col ul{
+    list-style: none;
+ }
+ .footer{
+    background-color: #616161;
+    padding: 70px 0;
+    margin-top: 10%;
+ }
+ .footer-col{
+    width: 25%;
+ }
+ 
+ .footer-col h4{
+    font-size: 18px;
+    color:#000000;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+ }
+ .footer-col h4::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+ }
+ .footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+ }
+ .footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbb;
+    display: block;
+    transition: all 0.3s ease;
+ }
+ .footer-col ul li a:hover{
+    color:#ffff;
+    padding-left: 8px;
+ }
+ .footer-col .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin:0  10px 10px 0;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffff;
+    text-align: center;
+    transition: all 0.3 ease;
+ }
+ .footer-col .social-links a:hover{
+    color: #24262b;
+    background-color: #ffff;
+ }

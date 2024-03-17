@@ -1,0 +1,82 @@
+
+
+<div *ngIf="cartList.length===0" class="centered">
+    No Item available in cart
+</div>
+<div *ngIf="cartList.length>0" class="centered">
+<table border="1">
+    <tr>
+        <th>Item Name</th>
+        <th>Image</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Total</th>
+        <th></th>
+        </tr>
+    <tr *ngFor="let cart of cartList">
+        <td>{{cart?.item?.itemName}}</td>
+        <td><img [src]="cart?.item?.image" /></td>
+        <td><button (click)="onIncreaseQunatity(cart)" class="button-padding">+</button>{{cart?.quantity}}<button (click)="onDecreaseQunatity(cart)" class="button-padding">-</button></td>
+        <td>{{cart?.mrpPrice}}</td>
+        <td>{{getTotal(cart?.quantity,cart?.mrpPrice)}}</td>
+        <td><button class="delete" (click)="deleteCart(cart)" mat-raised-button color="primary" >Delete Cart</button></td>
+        
+
+
+    </tr>
+</table>
+
+</div>
+<br />
+<div class="centered" *ngIf="cartList.length!==0">
+    <b>Grand Total: </b>&nbsp;&nbsp;{{grandTotal}} &nbsp;&nbsp;<button class="placeorder" (click)="placeOrder()" mat-raised-button color="primary" style="background-color: rgb(16, 40, 85) ;color:white;">Place Order</button>
+</div>
+<br>
+
+<!--Footer page-->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="row">
+
+            <div class="footer-col">
+                <h4>company</h4>
+                <ul>
+                    <li class="foot"><a href="#">about us</a></li>
+                    <li class="foot"><a href="#">category</a></li>
+                    <li class="foot"><a href="#">privacy policy</a></li>
+                    <li class="foot"><a href="#">affiliate program</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>get help</h4>
+                <ul>
+                    <li class="foot"><a href="#">FAQ</a></li>
+                    <li class="foot"><a href="#">shipping</a></li>
+                    <li class="foot"><a href="#">returns</a></li>
+                    <li class="foot"><a href="#">order status</a></li>
+                    <li class="foot"><a href="#">payment options</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>groceteria</h4>
+                <ul>
+                    <li class="foot"><a href="#">vegetables & fruits</a></li>
+                    <li class="foot"><a href="#">fresh meat</a></li>
+                    <li class="foot"><a href="#">speices and oils</a></li>
+                    <li class="foot"><a href="#">baby care</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>follow us</h4>
+               <div class="social-links">
+                
+                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a> 
+            </div> 
+            </div>
+

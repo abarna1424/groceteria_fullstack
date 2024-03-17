@@ -1,0 +1,51 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(#f55e07,#f50f07);
+  }
+  
+  header.site-logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+  }
+  .brand-logo{
+    width: 40px;
+    height: auto;
+  }
+
+  .user-name-item{
+    color: white;
+  }
+
+  
+  .header .logo {
+    font-size: 30px;
+    font-family: 'Sriracha', cursive;
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 30px;
+    font-weight: 800;
+  }
+  
+  .nav-items {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(#f55e07,#f50f07);
+    margin-right: 20px;
+  }
+  
+  .nav-items a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 35px 20px;
+    font-weight: 600;
+    
+  }
+  .nav-items a:hover{
+    cursor: pointer;
+  }
+  

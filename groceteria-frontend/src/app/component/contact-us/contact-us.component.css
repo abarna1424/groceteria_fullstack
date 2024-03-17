@@ -1,0 +1,212 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    
+} 
+
+.heading {
+    background-image: url('../../../assets/images/contact-logo.jpg');
+    height: 200px;
+    text-align: center;
+
+}
+
+section {
+
+
+    margin-left: 100px;
+
+}
+
+.header1 a {
+    color: black;
+    text-decoration: none;
+
+}
+
+.contact {
+    margin-top: 47px;
+
+    .icons-container {
+        /* @include grid(29rem); */
+        display: flex;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 21px;
+        margin-right: 100px;
+
+
+        .icons1 {
+            text-align: center;
+            background-color: white;
+            box-shadow: 0 20px 45px #00000020;
+            padding: 2rem;
+            text-align: center;
+            background: linear-gradient(#f57207,#ff0e0e);
+            color: white;
+
+
+            i {
+                height: 3rem;
+                width: 3rem;
+                line-height: 3rem;
+                font-size: 1.5rem;
+                background: green;
+                color: white;
+                border-radius: 50%;
+            }
+
+            h3 {
+                color: light-color;
+                font-size: 1.5rem;
+                padding: 0;
+            }
+
+            p {
+                color: light-color;
+                font-size: 1rem;
+                line-height: 1;
+            }
+        }
+
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        margin-top: 2rem;
+
+        form {
+            padding: 1rem;
+            flex: 1 1 36rem;
+            
+            background-color: rgb(199, 199, 199);
+    box-shadow: 0 20px 45px #00000020;
+
+            h3 {
+                font-size: 2.5rem;
+                padding-bottom: 1rem;
+                color: black;
+            }
+
+            .inputBox .input {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                box-shadow: #7a777720;
+                background-color: white;
+                input {
+                    width: 49%;
+                }
+            }
+
+            .inputBox .box,
+            textarea {
+                padding: 0.9rem 2.1rem;
+                font-size: 1.1rem;
+                box-shadow: #7a777720;
+                color: black;
+                text-transform: none;
+                margin: .7rem 0;
+            }
+
+            textarea {
+                width: 81%;
+                height: 14rem;
+                /* resize: none; */
+            }
+            input.btn {
+background-color: #66a407e8;
+font-size: 23px;
+color: white;
+}
+
+        }
+
+        .map{
+            flex:  1 1 40rem;
+            width: 100%;
+            height: 629px;
+            margin-right: 34px;
+        }
+    }
+}
+
+/*---------------------FOOTER PART STYLING-------------------------------------------------------------------------------------*/
+.footer-container{
+    max-width: 1170px;
+    margin: auto;
+    line-height: 1.5;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ }
+ .row{
+    display:flex;
+    flex-wrap: wrap;
+ }
+ .footer-col ul{
+    list-style: none;
+ }
+ .footer{
+    background-color: #616161;
+    padding: 70px 0;
+    margin-top: 10%;
+ }
+ .footer-col{
+    width: 25%;
+ }
+ 
+ .footer-col h4{
+    font-size: 18px;
+    color:#000000;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+ }
+ .footer-col h4::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+ }
+ .footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+ }
+ .footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbb;
+    display: block;
+    transition: all 0.3s ease;
+ }
+ .footer-col ul li a:hover{
+    color:#ffff;
+    padding-left: 8px;
+ }
+ .footer-col .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin:0  10px 10px 0;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffff;
+    text-align: center;
+    transition: all 0.3 ease;
+ }
+ .footer-col .social-links a:hover{
+    color: #24262b;
+    background-color: #ffff;
+ }
+ 

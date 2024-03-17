@@ -1,0 +1,95 @@
+
+
+<div class="centered">
+    Select Category: <select [(ngModel)]="category" (change)="getItemByCategory()">
+    <option [value]="100"> All </option>
+    <option *ngFor="let item of getCategoryList" [value]="item?.value">{{item?.name}}</option>
+    </select>
+</div>
+<br>
+
+<div *ngIf="itemList.length===0" class="centered">
+    No item is available in list
+</div>
+
+<div class="row">
+    <div class="col-lg-3 mt-3" *ngFor="let item of itemList;index as i">
+        <div class="itemsbox" *ngIf="itemList.length>0">
+            <p>{{item?.itemId}}</p>
+            <h1>{{item?.itemName}}</h1>
+            <img [src]="item?.image" />
+            <p><b>Description:</b>{{item?.description}}</p>
+            <p><b>Quantity:</b> {{item?.quantity}}</p>
+            <p><b>Price:</b> {{item?.mrpPrice | currency:'INR'}}</p>
+            <button class="edit" (click)="editItem(item)">Edit</button>&nbsp;
+            <button class="delete"   (click)="delItem(item)">Delete</button>
+        </div>
+    </div>
+</div>
+
+
+<br>
+<div *ngIf="itemList.length > 0" class="centered">
+    <app-paging [totalitem]="totalItem" [pageSize]="pageSize" [offset]="offset"
+    (onNextPageClick)="onNextPageClick($event)"
+    (onPreviousPageClick)="onPreviousPageClick($event)"
+    (onFirstPageClick)="onFirstPageClick($event)"
+    (onLastPageClick)="onLastPageClick($event)"></app-paging>
+</div>
+
+<!--Footer page-->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="row">
+
+            <div class="footer-col">
+                <h4>company</h4>
+                <ul>
+                    <li class="foot"><a href="#">about us</a></li>
+                    <li class="foot"><a href="#">category</a></li>
+                    <li class="foot"><a href="#">privacy policy</a></li>
+                    <li class="foot"><a href="#">affiliate program</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>get help</h4>
+                <ul>
+                    <li class="foot"><a href="#">FAQ</a></li>
+                    <li class="foot"><a href="#">shipping</a></li>
+                    <li class="foot"><a href="#">returns</a></li>
+                    <li class="foot"><a href="#">order status</a></li>
+                    <li class="foot"><a href="#">payment options</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>groceteria</h4>
+                <ul>
+                    <li class="foot"><a href="#">vegetables & fruits</a></li>
+                    <li class="foot"><a href="#">fresh meat</a></li>
+                    <li class="foot"><a href="#">speices and oils</a></li>
+                    <li class="foot"><a href="#">baby care</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>follow us</h4>
+               <div class="social-links">
+                
+                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a> 
+            </div> 
+            </div>
+
+
+
+        </div>
+    </div>
+    
+</footer>
+
+
+
